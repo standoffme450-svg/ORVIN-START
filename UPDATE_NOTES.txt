@@ -1,0 +1,61 @@
+ORVIN update notes — 2026-11-06
+
+- Profile close control moved to the left side of the header to avoid covering the language selector.
+- Profile now displays progress bars for Mathematics, Physics, Chemistry, and Rocket Learning.
+- O'quv section now includes Rocket Learning alongside Mathematics, Physics, and Chemistry.
+- Physics and Chemistry lesson pages now show a structured learning path with topic blocks, key formulas, and worked examples, plus a subject progress bar.
+- Added Physics and Chemistry mock-test entry points, with five selectable variants and 15 questions per variant. The question bank uses the app's existing subject questions plus added calculation/concept questions.
+- Mathematics certificate uses the supplied certificate artwork and can be saved separately as PNG or PDF after a qualifying Mathematics mock-test score (46/100 or higher).
+- Existing rocket, physics, and chemistry certificate flows remain in place.
+
+Note: Physics/Chemistry mock variants currently rotate the same 15-question subject bank; they are useful for practice but are not a claim of official Bilimni baholash agentligi exam equivalence.
+
+--- 2026-11-07 ---
+- FIZIKA bo'limi matematikadagidek qayta qurildi (ms-physics.js + ms-physics-data.js): bloklar → mavzular; har mavzuda 1) qoida 2) namuna yechim 3) mashq 4) MS savol 5) birlashtirish (masalan magnit: temir/nikel — tortadi, plastik/yog'och — tortmaydi). 3 ta ketma-ket to'g'ri javob = o'zlashtirildi. O'ng tomonda 30 savollik MOCK TEST (60 daq, xatolar tahlili).
+- Eski fizika mavzularining hammasi saqlandi (115 ta, takrorlari birlashtirildi) + 11 ta yetishmagan mavzu qo'shildi.
+- Fizika va Kimyo sertifikatlari olib tashlandi; faqat Rocket Learning (va Matematika) sertifikati qoldi.
+- Matematikaga 5 ta yetishmagan mavzu qo'shildi: ko'rsatkichli/logarifmik funksiyalar, trigonometrik funksiyalar, funksiya limiti, fazoda koordinatalar, Nyuton binomi.
+- Fizika MOCK TEST matematikadagidek: 45 topshiriq = 100 ball (1–10 yopiq 1,3 · 11–32 yopiq 2,2 · 33–35 moslashtirish 2,2 · 36–45 ochiq 3,2), 150 daq, daraja A+…C (46 balldan), zaif mavzular va xatolar tahlili.
+- Fizika: har bir mavzuda AMALIY qism: (1) birlashtirish/saralash (122/122 mavzu), (2) 22 mavzuda virtual laboratoriya (slayderlar), (3) magnit mavzularida 🧲 ni sudrab temir/nikel/po'latni tortish tajribasi.
+- Fizika: qo'l bilan havoda boshqarish (ko'rsatkich barmoq = kursor, chimchilash = tugma bosish / 🧲 ni ushlash / slayderni surish; ekran chetida qo'lni ushlab turib aylantirish).
+- Fizika: 16 ta interaktiv animatsion tajriba (mayatnik, prujina, linza, zanjir yig'ish, otilgan jism, qiya tekislik, Arximed, nur sinishi, to'lqin, Kulon, erkin tushish, radioaktiv yemirilish, induksiya, Kepler, gaz, impuls) — 22 mavzuda.
+
+--- 2026-11-07 (fizika mock) ---
+- Fizika MOCK TEST endi matematikadagidek to'liq ekranli imtihon (ms-physics-mock.js): tepada 1–45 raqamlar qatori, javob berilganini ko'rsatuvchi progress chizig'i, taymer, «Javobsiz» hisoblagich.
+- 5 ta mustaqil variant (1–5): har biri 45 topshiriq = 100 ball, variantlar orasida savollar takrorlanmaydi; har variant qat'iy (qayta ochilganda o'zgarmaydi).
+- Sessiya saqlanadi: chiqib ketsa «Davom ettirish» tugmasi chiqadi.
+- Tuzatish: yopiq savollar endi hammasi A–D (4 ta javob; avval ayrimlarida 3 ta edi); moslashtirish (33–35) A–F, 6 ta javob kaliti bilan.
+
+--- 2026-11-07 (kimyo + fizika qo'l laboratoriyasi) ---
+- KIMYO: yangi o'rgatish bo'limi (ms-chem-learn.js + ms-chem-more.js): 15 blok, har mavzuda qoida → namuna → mashq → MS savol → amaliy lab. 3 ta ketma-ket to'g'ri = o'zlashtirildi.
+- Kimyo labi: atomlarni chimchilab (yoki sichqoncha bilan) markazga sudrab molekula yig'ish (H₂O, NH₃, NaCl, CH₄, CO₂...) yoki slayderli hisob.
+- FIZIKA: ms-phys-hand.js — HAR mavzu oxirida qo'l bilan amaliy lab (zanjir, linza, muz+olov, ± zaryad, richag, yadro, ...). Mavzuga qarab avtomatik tanlanadi.
+
+--- 2026-11-07 (2-qism) ---
+- Slayderli lablar olib tashlandi (kimyo + fizika); faqat qo'l bilan amaliy lab.
+- Kimyo: fizika dizaynidagi o'rgatish + MOCK TEST (ms-chem-learn.js, ms-chem-mock.js, ms-chem-mock-kit.js): 75 mavzu, 5 variant x 45 topshiriq = 100 ball.
+- Variant kartalari (matematika/fizika/kimyo) bir xil: 45 topshiriq · 100 ball · 150 daq + qiyinlik (ms-ui-polish.js).
+- Qo'l shakllari: ms-hand-shapes.js (1 aylana, 2 kesma, 3 piramida, 4 kub, 5 prizma); qo'l ortidan yuradi, musht/chet/yo'qolsa darhol yo'qoladi. Eski #shape3d olib tashlandi.
+- Til tugmasi: 🌐 bosilsa UZ/RU/EN + ✕ chiqadi.
+- ORVIN klaviaturasi ko'kroq + ⇧ (katta harf) tugmasi.
+- "learning / o'quv / учеба" deyilsa ORVIN "Learning opened" deb javob beradi (o'quv regex xatosi ham tuzatildi).
+
+--- 2026-11-07 (yakuniy) ---
+- Kimyo: 84 mavzu (barcha 15 blok, spetsifikatsiya bandlari qamrab olindi), har birida qo'l labi.
+- "Learning opened" tanlangan tilda aytiladi (UZ/RU/EN) — internetsiz ham ishlaydi.
+
+--- 2026-11-08 (tuzatishlar) ---
+- Firebase loyihasi orvin-space ga o'tkazildi (lite/pro/premium). Authorized domains ga sayt domenini (FOYDALANUVCHI.github.io) shu loyihada qo'shing, Google yoqilgan bo'lsin, Firestore qoidalarini shu loyihaga qo'ying.
+- Profil oynasi endi chat javobi, mikrofon, menyu tugmasi va boshqa elementlar ustida (z-index 10035); ochiq paytda ular yashiriladi.
+- Profilda foydalanuvchi UID si + "Nusxa" tugmasi. Pro/Premium obunasiz kirish oynasida va to'lovning 2-qadamida ham UID ko'rinadi.
+- Obuna: tarif oynasidagi tugma bosilganda tarif oynasi yopiladi va to'lov ma'lumotlari oynasi (karta, summa, bot) ochiladi (avval u tarif oynasi ORQASIDA qolib ketardi, shuning uchun tugma ishlamayotgandek edi).
+- Ovozli buyruqlar (orvin-fix.js): "quyosh sistemasi / солнечная система / solar system" -> ORVIN "ma'lumot beraymi yoki bo'limni ochaymi?" deb so'raydi (tugma yoki ovoz bilan javob). Sayyora nomlari ham shunday. Raketa, ob-havo, globus, kosmos, brauzer buyruqlari o'zbek/rus tilida ham ishlaydi (internet tarjimasiz).
+- ORVIN klaviaturasi: tepada 🌐 EN/RU tugmasi (kirill harflari, ⇧ katta harf bilan).
+
+=== ORVIN RELEASE 1.0 — 2026-11-08 ===
+- SERTIFIKATLAR FAQAT PREMIUM TARIFDA (Lite va Pro'da berilmaydi: profil, Ekspeditsiya, Fan markazida 🔒 + "Premium'ga o'tish").
+- Sertifikatlar barcha mavzular tugagach beriladi: Matematika, Fizika, Kimyo (3 ta ketma-ket to'g'ri javob = mavzu o'zlashtirildi), Raketa (7 modul + test 11/15). Hammasi PNG va PDF.
+- Kimyo sertifikati qo'shildi (ilgari yo'q edi). Profil ro'yxatida Matematika/Fizika/Kimyo/Raketa, progress bilan.
+- Raketa sertifikati sahifasi endi shartlar bajarilmasa yopiq.
+- Landing: Matematika sertifikati qo'shildi (4 ta), "faqat Premium" yozuvi. Tarif va to'lov oynalarida ham eslatma (UZ/RU/EN).
+- Yangi fayl: orvin-certlock.js (lite.html va pro.html uchun) — GitHub'ga boshqa fayllar bilan birga yuklang.

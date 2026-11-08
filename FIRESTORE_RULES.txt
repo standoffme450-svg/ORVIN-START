@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ADMIN: o'zingizning Google emailingizni yozing
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ['SIZNING_EMAIL@gmail.com'];
+    }
+
+    // Foydalanuvchi o'z ma'lumoti: progress, kunlik kredit sarfi, tarix
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      match /{sub=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Obunalar: o'qish — egasi va admin; yozish — faqat admin
+    match /subs/{uid} {
+      allow read: if request.auth != null && (request.auth.uid == uid || isAdmin());
+      allow write: if isAdmin();
+    }
+
+    // Sertifikatlarni tekshirish
+    match /certs/{id} {
+      allow read: if true;
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && exists(/databases/$(database)/documents/subs/$(request.auth.uid));
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+ORVIN — MATEMATIKA VA FIZIKA MOCK/TA’LIM AUDITI
+Sana: 2026-11-06
+
+TEKSHIRILGAN FAYLLAR
+- index.html (fizika/kimyo darslari, PHYS_UNITS va fan mock test oqimi)
+- ms-matematika.js (matematika syllabus, blueprint va ball hisoblash)
+- ms-mock.js hamda ms-mock-v1.js ... ms-mock-v5.js (matematika mock testlar)
+- ms-lessons.js (matematika nazariya, yechimlar va MS darajasidagi mashqlar)
+- oquv.js (fanlar tanlovi va progress)
+
+ANIQLANGAN MUAMMOLAR
+1. Fizika mock testlarida 5 ta variant bor deb ko‘rsatilgan, lekin barcha variantlar aynan bir 15 savollik bankni aylantirib beradi. Bu mustaqil variantlar emas.
+2. Fizika mock testlari 15 ta uch javobli, asosan bir bosqichli savollardan iborat. Vaqt cheklovi, murakkab hisoblashlar, grafik/jadval tahlili, ko‘p bosqichli masalalar va batafsil javob tahlili yo‘q. Hozirgi holati Milliy sertifikat darajasiga teng emas.
+3. Fizika darsining kirish matnida 10 savol deyiladi, amaldagi dars testida esa 15 savol bor edi. Matn moslashtirildi.
+4. Fizika paragrafidagi to‘g‘ri javobdan keyin boshqa javob tugmalarini bloklash selektori noto‘g‘ri yozilgan edi. Selektor tuzatildi.
+5. Fizika darslaridagi 5 ta interaktiv topshiriq asosan boshlang‘ich darajadagi moslashtirish/drag-and-drop; ular Milliy sertifikatga tayyorlovning o‘rnini bosa olmaydi.
+6. Matematika blueprint hisoblari 45 topshiriq va 100 ballga mos: Y1=10, Y2=22, M=3, O=10. Ochiq topshiriqlarda a/b qismlar alohida hisoblanadi (jami 55 javob elementi). Bu ichki hisob mantiqan izchil, ammo rasmiy imtihon bilan aynan bir xil format deb ko‘rsatish uchun rasmiy spetsifikatsiya bilan alohida solishtirish zarur.
+7. Matematika syllabus 14 katta blokni qamraydi, biroq ayrim nazariya/namuna yechimlari mavzular bo‘yicha notekis. Ayrim mavzularda chuqur shart tahlili, parametr, grafik, bir nechta yechim usuli va xatolar diagnostikasi yetarli emas.
+8. Natija hisoblash oddiy vaznli yig‘indi va qat’iy chegaralardan foydalanadi. Bu haqiqiy milliy sertifikat natijasini kafolatli taqlid qilmaydi; rasmiy baholash modeli bilan tekshirilmasdan A+/A darajasi sifatida talqin qilinmasligi kerak.
+9. Matematik mock variantlarining ayrim savollari juda sodda yoki takroriy tipda. Variantlar orasida mavzu qamrovi va murakkablik muvozanatini alohida kalibrlash kerak.
+
+MUHIM: Ushbu arxivda hozircha faqat aniq topilgan matn/selektor xatolari tuzatildi. Mock savollarini to‘liq Milliy sertifikat darajasiga ko‘tarish uchun yangi savol banklari, tekshirilgan javoblar, vaqt rejimi, ochiq javoblar tekshiruvi va bosqichma-bosqich o‘rgatish oqimi ishlab chiqilishi kerak. Bularni rasmiy imtihonga teng deb da’vo qilmaymiz; maqsad — shu darajaga yaqin, puxta tayyorlov tizimi.
+
+YANGILANISH (2026-11-07 — physics_src ga o‘tkazildi):
+- Matematika 5 ta mock variant qiyinchilik bo‘yicha:
+  • v1 = MS (Milliy Sertifikat) eng qiyin
+  • v2 = O‘rtacha
+  • v3–v5 = Normal
+- Matematika o‘rgatish paragraflari MS darajasiga moslashtirilgan
+- Matematika sertifikati: barcha paragraflar o‘zlashtirilganda ism yozib PNG/PDF yuklab olish (certs/math_certificate.png)
+- Ushbu arxiv asosiy ORVIN_Physics_Mock_v3 bazasiga matematika o‘zgarishlari qo‘shilgan holat
